@@ -1,4 +1,4 @@
-rgallery: Build a Static Gallery of R Snippets
+rgallery: Build a Gallery of R Snippets
 -------------
 
 This package makes it easy to create an gallery for displaying small R vignettes, or "snippets".

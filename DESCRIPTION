@@ -1,11 +1,11 @@
 Package: rgallery
 Type: Package
-Title: Build a Static Gallery of R Snippets
+Title: Build a Gallery of R Snippets
 Version: 0.1
 Date: 2015-03-28
 Author: person("David", "Robinson", email = "admiral.david@gmail.com", role = c("aut", "cre"))
 Maintainer: David Robinson <admiral.david@gmail.com>
-Description: Build a gallery of R snippets, each compiled in knitr and
+Description: Build a static gallery of R snippets, each compiled in knitr and
     hosted as a static webpage by Jekyll.
 Imports: knitr
 License: GPL-3
