@@ -1,7 +1,7 @@
 rgallery: Build a Gallery of R Snippets
 -------------
 
-This package makes it easy to create an gallery for displaying small R vignettes, or "snippets".
+This package makes it easy to create an gallery for displaying small R vignettes, or "snippets". [View an example here!](http://varianceexplained.org/broom-gallery/)
 
 ### Installation
 
