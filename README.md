@@ -17,12 +17,12 @@ To create and edit your gallery, simply:
 
 1. Clone the default repository and enter the directory:
 
-      git clone https://github.com/dgrtwo/rgallery-default.git my-gallery
-      cd my-gallery
+        git clone https://github.com/dgrtwo/rgallery-default.git my-gallery
+        cd my-gallery
 
 2. Start a Jekyll server:
 
-      jekyll serve --watch
+        jekyll serve --watch
 
 3. Visit your local gallery at [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
 
@@ -30,7 +30,7 @@ To create and edit your gallery, simply:
 
 5. To build (or re-build) your new snippets, go into R and run:
 
-      rgallery::build_gallery()
+        rgallery::build_gallery()
 
 6. To publish your gallery online for free, use [GitHub pages](https://pages.github.com/): just make a public repository and push to the `gh_pages` branch.
 
