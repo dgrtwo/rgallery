@@ -6,7 +6,7 @@
 #' @param infolder input directory
 #' @param outfolder directory
 #' @param images_dir directory to store resulting images
-#' @param ... extra arguments passed on to knitr's chunk options
+#' @param ... extra arguments passed on to \code{\link{build_snippet}}
 #'
 #' @export
 build_gallery <- function(infolder = "_R", outfolder = "snippets",
@@ -20,7 +20,7 @@ build_gallery <- function(infolder = "_R", outfolder = "snippets",
         # knit only if the input file is the last one modified
         if (!file.exists(outfile) |
             file.info(infile)$mtime > file.info(outfile)$mtime) {
-            build_snippet(infile, outfile, images_dir)
+            build_snippet(infile, outfile, images_dir, ...)
         }
     }
 }

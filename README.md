@@ -32,7 +32,9 @@ To create and edit your gallery, simply:
 
         rgallery::build_gallery()
 
-6. To publish your gallery online for free, use [GitHub pages](https://pages.github.com/): just make a public repository and push to the `gh_pages` branch.
+6. To publish your gallery online for free, use [GitHub pages](https://pages.github.com/): just make a public repository and push to the `gh_pages` branch. Two notes:
+  - You'll need to change the `url` parameter in `_config.yml` to `http://<yourname>.github.io/<repo-name>`
+  - You'll need to compile the snippets with `build_gallery(base_url = "/<repo-name>/")`
 
 That's all there is to it!
 

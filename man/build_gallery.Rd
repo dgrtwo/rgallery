@@ -14,7 +14,7 @@ build_gallery(infolder = "_R", outfolder = "snippets",
 
 \item{images_dir}{directory to store resulting images}
 
-\item{...}{extra arguments passed on to knitr's chunk options}
+\item{...}{extra arguments passed on to \code{\link{build_snippet}}}
 }
 \description{
 Snippets are stored as .Rmd files in one directory: save them into
