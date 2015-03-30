@@ -7,7 +7,10 @@ Author: person("David", "Robinson", email = "admiral.david@gmail.com", role = c(
 Maintainer: David Robinson <admiral.david@gmail.com>
 Description: Build a static gallery of R snippets, each compiled in knitr and
     hosted as a static webpage by Jekyll.
-Imports: knitr
+Imports: knitr,
+    stringr,
+    yaml,
+    git2r
 License: GPL-3
 LazyData: TRUE
 Authors: David Robinson <admiral.david@gmail.com> [aut, cre]

@@ -9,37 +9,44 @@ Install with [devtools](https://github.com/hadley/devtools):
 
     devtools::install_github("dgrtwo/rgallery")
 
-You'll need [Jekyll](http://jekyllrb.com/) installed as well.
+You'll need [Jekyll](http://jekyllrb.com/) and [git](http://git-scm.com/) installed as well.
 
 ### Usage
 
 To create and edit your gallery, simply:
 
-1. Clone the default repository and enter the directory:
+1. Set up a gallery by running the following commands in R:
 
-        git clone https://github.com/dgrtwo/rgallery-default.git my-gallery
+        library(rgallery)
+        create_gallery("my-gallery")
+        build_gallery("my-gallery")
+
+  This downloads the [default r-gallery setup](https://github.com/dgrtwo/rgallery-default) and builds it.
+
+2. Back in the command line, go into the directory and start a Jekyll server:
+
         cd my-gallery
-
-2. Start a Jekyll server:
-
         jekyll serve --watch
 
 3. Visit your local gallery at [http://127.0.0.1:4000/](http://127.0.0.1:4000/).
 
-4. To create additional snippets, add `.Rmd` files to the `_R` directory. Make sure you include `layout: snippet` in the YAML header.
+4. To create additional snippets, add `.Rmd` files to the `_R` directory. Make sure you include `layout: snippet` in the YAML header. Then do `build_gallery("my-gallery")` to compile them.
 
-5. To build (or re-build) your new snippets, go into R and run:
-
-        rgallery::build_gallery()
-
-6. To publish your gallery online for free, use [GitHub pages](https://pages.github.com/): just make a public repository and push to the `gh_pages` branch. Two notes:
-  - You'll need to change the `url` parameter in `_config.yml` to `http://<yourname>.github.io/<repo-name>`
-  - You'll need to compile the snippets with `build_gallery(base_url = "/<repo-name>/")`
+5. To publish your gallery online for free, use [GitHub pages](https://pages.github.com/): just make a public repository and push to the `gh-pages` branch. **Note**: You'll need to change the `url` parameter in `_config.yml` to `http://<yourname>.github.io/<repo-name>`.
 
 That's all there is to it!
 
+### Additional customization
+
+You can customize the global knitr options (for example, `cache = TRUE` or `echo = FALSE`) by adding to the `knitr-options` block in `_config.yml`:
+
+    # rgallery options
+    knitr-options:
+      message: false
+
 ### Future Plans
 
-* Categories and tags, allowing multiple snippets to be connected to illustrate a larger topic or workflow
+* Categories and tags
+* Allowing multiple snippets to be connected, and therefore compiled in a row, to illustrate a larger topic or workflow
 * Allowing snippet submission, as a pull request to the repository, directly from R (i.e. `submit_snippet('my_snippet.Rmd', repo = 'dgrtwo/big-gallery')`). Preferably allow the repository owner to build and approve the snippet from within R as well.
 * Flexible front-ends, including alternatives to Jekyll

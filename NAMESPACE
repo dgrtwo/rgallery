@@ -2,4 +2,6 @@
 
 export(build_gallery)
 export(build_snippet)
+export(clean_gallery)
+export(create_gallery)
 import(knitr)

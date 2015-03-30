@@ -4,18 +4,20 @@
 \alias{build_snippet}
 \title{Knit a single .Rmd snippet}
 \usage{
-build_snippet(input, output, images_dir = "images", base_url = "/", ...)
+build_snippet(input, output, base_url = "/", category = NULL, fig.path, ...)
 }
 \arguments{
 \item{input}{a .Rmd file to compile}
 
 \item{output}{the .md file to write}
 
-\item{images_dir}{directory to save images to}
-
 \item{base_url}{base_url of site}
 
-\item{...}{extra arguments passed on to knitr's chunk options}
+\item{category}{snippet's category}
+
+\item{fig.path}{directory where figures will be stored}
+
+\item{...}{extra arguments for knitr's chunk options, such as cache = TRUE}
 }
 \description{
 Knit a .Rmd snippet into a .md file. A snippet is like a "mini-vignette"
